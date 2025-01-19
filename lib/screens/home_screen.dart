@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab2_186061/services/api-services.dart';
+import 'package:lab2_186061/services/api_services.dart';
 import 'package:lab2_186061/widgets/custom_appbar.dart';
 import 'package:lab2_186061/widgets/loading_indicator.dart';
 import 'package:lab2_186061/widgets/error_widget.dart';
@@ -49,7 +49,6 @@ class _HomeScreenState extends State<HomeScreen> {
             itemBuilder: (context, index) {
               final jokeType = snapshot.data![index];
               return JokeCard(
-                jokeType: jokeType,
                 onTap: () {
                   Navigator.pushNamed(
                     context, 
@@ -57,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     arguments: jokeType,
                   );
                 },
-                joke: null,
+                joke: null, 
               );
             },
           );

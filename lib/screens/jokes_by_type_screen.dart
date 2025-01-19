@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lab2_186061/models/joke.dart';
-import 'package:lab2_186061/services/api-services.dart';
+import 'package:lab2_186061/services/api_services.dart';
 import 'package:lab2_186061/widgets/joke_card.dart';
 
 class JokesByTypeScreen extends StatefulWidget {
@@ -41,7 +41,6 @@ class _JokesByTypeScreenState extends State<JokesByTypeScreen> {
             itemBuilder: (context, index) {
               final joke = snapshot.data![index];
               return JokeCard(
-                jokeType: widget.jokeType,
                 onTap: () {
                 },
                 joke: joke,

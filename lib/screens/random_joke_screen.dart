@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab2_186061/services/api-services.dart';
+import 'package:lab2_186061/services/api_services.dart';
 import 'package:lab2_186061/models/joke.dart';
 
 class RandomJokeScreen extends StatefulWidget {

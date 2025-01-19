@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart' as home_screen;
 import 'screens/jokes_by_type_screen.dart' as jokes_screen; 
 import 'screens/random_joke_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'services/firebase_notification_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  FirebaseNotificationService.setupFirebaseMessaging();
   runApp(MyApp());
 }
 
